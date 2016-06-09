@@ -12,13 +12,15 @@ class IssueCommentList extends Component {
     return (
       <div>
         {
-          comments.map((comment) => {
-            return (<IssueCommentListItem
-              key={comment.id}
-              comment={comment}
-              onClickSave={this.props.onClickSave}
-              onClickDelete={this.props.onClickDelete}
-            />)
+          comments.map( comment => {
+            return (
+              <IssueCommentListItem
+                key={comment.id}
+                comment={comment}
+                onClickSave={this.props.onClickSave}
+                onClickDelete={this.props.onClickDelete}
+              />
+            )
           })
         }
       </div>

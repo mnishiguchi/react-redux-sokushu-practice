@@ -68,3 +68,13 @@ root
   + Configuration for serving the compiled assets from `webpack dev server`.
 
 ---
+
+## Libraries used
+
+- [react-css-modules](https://github.com/gajus/react-css-modules)
+  + Implement automatic mapping of CSS modules.
+- [Redux Thunk](https://github.com/gaearon/redux-thunk)
+  + Thunk middleware for Redux.
+  + [How to dispatch a Redux action with a timeout?](http://stackoverflow.com/a/35415559/3837223)
+- [react-loader](https://github.com/quickleft/react-loader)
+  + Provides your React.js component a simple mechanism for rendering a loading spinner (via spin.js) while data is loading, such as an asynchronous request to load data for a view.

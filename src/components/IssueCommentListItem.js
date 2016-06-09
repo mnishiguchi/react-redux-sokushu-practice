@@ -49,43 +49,38 @@ class IssueCommentListItem extends Component {
           <div styleName="actions">
             <span
               styleName="header-icon"
-              onClick={this.onClickEdit.bind(this)}
-            >
+              onClick={this.onClickEdit.bind(this)} >
               <i className="fa fa-pencil" />
             </span>
             <span
               styleName="header-icon"
-              onClick={this.onClickDelete.bind(this)}
-            >
+              onClick={this.onClickDelete.bind(this)} >
               <i className="fa fa-trash" />
             </span>
           </div>
         </div>
         <div styleName="main">
-          { this.state.isEditing ? (
-              <div>
-                <textarea
-                  value={this.state.editingContent}
-                  onChange={this.onChangeContent.bind(this)}
-                />
-                <div styleName="buttons">
-                  <div
-                    styleName="comment-button"
-                    onClick={this.onClickSave.bind(this)}
-                  >
-                    Save
-                  </div>
-                  <div
-                    styleName="cancel-button"
-                    onClick={this.onClickCancel.bind(this)}
-                  >
-                    Cancel
+          {
+            this.state.isEditing
+              ? <div>
+                  <textarea
+                    value={this.state.editingContent}
+                    onChange={this.onChangeContent.bind(this)}
+                  />
+                  <div styleName="buttons">
+                    <div
+                      styleName="comment-button"
+                      onClick={this.onClickSave.bind(this)} >
+                      Save
+                    </div>
+                    <div
+                      styleName="cancel-button"
+                      onClick={this.onClickCancel.bind(this)} >
+                      Cancel
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              nl2br(comment.content)
-            )
+              : nl2br(comment.content)
           }
         </div>
       </div>

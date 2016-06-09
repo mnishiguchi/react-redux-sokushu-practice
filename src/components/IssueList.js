@@ -22,12 +22,14 @@ class IssueList extends Component {
           <div styleName="row-3">updated</div>
         </div>
         {
-          issues.map((issue) => {
-            return (<IssueListItem
-              key={issue.id}
-              issue={issue}
-              onClickRow={this.props.onClickRow.bind(null, issue)}
-            />)
+          issues.map( issue => {
+            return (
+              <IssueListItem
+                key={issue.id}
+                issue={issue}
+                onClickRow={this.props.onClickRow.bind(null, issue)}
+              />
+            )
           })
         }
       </div>

@@ -63,23 +63,22 @@ class IssueCommentForm extends Component {
           />
         </div>
         <div styleName="footer">
-          { issue.status === STATE.OPEN ? (
-            <div
-              styleName="close-issue-button"
-              onClick={this.onClickChangeStatus.bind(this, STATE.CLOSE)}
-            >
-              Close Issue
-            </div>) : (<div
-              styleName="close-issue-button"
-              onClick={this.onClickChangeStatus.bind(this, STATE.OPEN)}
-            >
-              Re-open Issue
-            </div>)
+          {
+            issue.status === STATE.OPEN
+              ? <div
+                  styleName="close-issue-button"
+                  onClick={this.onClickChangeStatus.bind(this, STATE.CLOSE)} >
+                  Close Issue
+                </div>
+              : <div
+                  styleName="close-issue-button"
+                  onClick={this.onClickChangeStatus.bind(this, STATE.OPEN)} >
+                  Re-open Issue
+                </div>
           }
           <div
             styleName="comment-button"
-            onClick={this.onClickComment.bind(this)}
-          >
+            onClick={this.onClickComment.bind(this)} >
             Comment
           </div>
         </div>

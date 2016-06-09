@@ -48,9 +48,9 @@ class IssueNewHeader extends Component {
 
 IssueNewHeader.propTypes = {
   issueNewManager: PropTypes.object.isRequired,
-  onChangeTitle: PropTypes.func.isRequired,
+  onChangeTitle:   PropTypes.func.isRequired,
   onChangeContent: PropTypes.func.isRequired,
-  onCreateIssue: PropTypes.func.isRequired,
+  onCreateIssue:   PropTypes.func.isRequired,
 }
 
 export default CSSModules(IssueNewHeader, styles)
