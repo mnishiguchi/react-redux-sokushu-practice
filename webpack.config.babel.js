@@ -6,6 +6,7 @@ export const serverPort = 8080
 export const serverURI = `http://localhost:${serverPort}`
 
 export default {
+  // webpackはこのファイルを起点にビルドをかけます。ここにルーティングに関する記述があります。
   entry: {
     issue: './src/entries/issue.js',
   },
